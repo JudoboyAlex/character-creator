@@ -31,14 +31,14 @@ function App() {
   return (
     <main className={styles.characterEditor}>
       <MaxWidthWrapper className={styles.maxWidthWrapper}>
-        <header className={styles.header}>
+        <header className={styles.header} style={{"maxWidth": "65%"}}>
           <h1 className={styles.title}>Create your Character</h1>
           <p className={styles.description}>
             Customize your character's look and style using the
             controls below. What sort of adventure will you embark on?{' '}
           </p>
         </header>
-        <div className={styles.controlColumn}>
+        <div className={styles.controlColumn} style={{"maxWidth": "50%"}}>
           <ControlPane
             title="Bodies"
             options={bodyOptions}
@@ -78,7 +78,10 @@ function App() {
         </div>
       </MaxWidthWrapper>
 
-      <div className={styles.characterWrapper}>
+      <div 
+      className={styles.characterWrapper} 
+      style={{"position": "fixed", "top":"150px", "right": "30px", "height": "500px"}}
+      >
         <Character
           body={body}
           head={head}

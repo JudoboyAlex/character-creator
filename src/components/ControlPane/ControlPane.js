@@ -13,7 +13,8 @@ const ControlPane = ({
   handleSelectOption,
 }) => {
   return (
-    <div className={styles.controlPane}>
+    <div className={styles.controlPane} style={{"whiteSpace": "nowrap", "overflow-x": "auto"}}
+    >
       <h2 className={styles.title}>
         {title}
 
